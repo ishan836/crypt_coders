@@ -31,15 +31,17 @@ async def main():
     await mv_(1600,-1000)
     await mv_(1450,1000)
     turn_left(300)
-    await move_arm_degrees(1700,1200) #moves it down
+    #await move_arm_degrees_right(1700,1200) #moves it down
     await mv_(650,-1000)
     turn_right(367)
     await mv_(-950,1000)
-    await move_arm_degrees(1700,-1200)
+    turn_left(200)
+    await mv_(-100,500)
     await move_arm_degrees(-1700,-1200)
-    await mv_(-950,1000)
+    await move_arm_degrees(1900,-1500)
+    #await mv_(-50,100)
     #await move_arm_degrees(950,-900)
     #await mv_(400,-500)
     #await move_arm_degrees(950,900)
     #await mv_(600,500)
-runloop.run(main())#surface-brush
+runloop.run(main())
